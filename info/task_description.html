@@ -1,21 +1,35 @@
-<p>
-    <i>
-    We have a candy crush board and we want to find out how many legal moves we have now. A legal move means that you choose two adjacent squares and switch the candy in the two square and after the switch there is at least three adjacent squares on a line have same candy.
-    </i>
-</p>
+<style type="text/css">
+    .g1 {
+        font-weight: bold;
+        color: red;
+    }
+</style>
 
+<p>We have a "Candy Crush" board. We want to find out how many switches "crushes candies".</p>
 <p>
-    More information about this game can be found <a href="http://en.wikipedia.org/wiki/Candy_Crush_Saga">here</a>
+    A "Candy Crush" board is a 2-dim list containing some elements.
+    A switch is switching two adjacent elements in board.
+    A switch "crushes candies" if there is at least three same elements in alignment after switching.
+</p>
+<p>
+    Here is an example:
+    <div style="font-family: monospace">
+        [7,3,<span class="g1">1</span>,4,4]<br/>
+        [7,3,<span class="g1">4</span>,3,2]<br/>
+        [<span class="g1">3</span>,<span class="g1">7</span>,5,1,2]<br/>
+        Result: <span class="g1">2</span>
+    </div>
+    After switching 3 and 7, we got three 7 and three 3 in alignment, so the switch "crushes candies".
 </p>
 
 <p>
     <strong>Input: </strong>
-    2-dim list, the state of a candy crush board, different number means different kinds of candy, there are at most 5 kinds of candy
+    2-dim list, the state of a candy crush board. Different numbers mean different kinds of candy, there are at most 5 kinds of candy
 </p>
 
 <p>
     <strong>Output: </strong>
-    Integer, how many legal move we have in the candy crush board
+    Integer, how many switches can crush candies.
 </p>
 
 <div class="for_info_only">
